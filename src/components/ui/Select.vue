@@ -1,9 +1,9 @@
 <template>
-  <div class="home-page"></div>
+  <div class="ui-select"></div>
 </template>
 
 <script>
 export default {
-  name: 'home-page'
+  name: 'ui-select'
 }
 </script>

@@ -1,9 +1,9 @@
 <template>
-  <div class="home-page"></div>
+  <picture class="ui-picture"></picture>
 </template>
 
 <script>
 export default {
-  name: 'home-page'
+  name: 'ui-picture'
 }
 </script>
