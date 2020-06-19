@@ -1,0 +1,24 @@
+.header {
+  @extend .elevation-2;
+  @extend .pa-3;
+  @extend .df;
+  @extend .aic;
+  @extend .jcsb;
+}
+.nav {
+  @extend .dg;
+
+  grid-auto-columns: max-content;
+  grid-auto-flow: column;
+  grid-gap: $global-size / 2;
+}
+
+.logo {
+  @extend .df;
+  @extend .aic;
+
+  &-img {
+    width: $global-size * 2.25;
+    height: $global-size * 2.25;
+  }
+}

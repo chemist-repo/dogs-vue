@@ -2,7 +2,7 @@
   <p-list
     @set-favorite="setFavorite"
     @on-scroll="onScroll"
-    :images="randomDogsList"
+    :images="breedDogsList"
     :favorites="favorites"
   />
 </template>
@@ -14,37 +14,42 @@ import setFavorite from '@/mixins/setFavorite'
 import { mapGetters, mapActions } from 'vuex'
 
 export default {
-  name: 'home-page',
+  name: 'breed-page',
   components: {
     pList
   },
   mixins: [
     setFavorite
   ],
+  watch: {
+    async '$route.params.breed' (breed) {
+      await this.getBreedRandomDogsList(breed)
+    }
+  },
   computed: {
     ...mapGetters('api', [
-      'randomDogsList',
+      'breedDogsList',
       'favorites',
-      'isRandomDogsAction'
+      'isBreedDogsAction'
     ])
   },
   methods: {
     ...mapActions('api', [
-      'getRandomDogsList',
-      'getMoreRandomDogsList'
+      'getBreedRandomDogsList',
+      'getMoreBreedRandomDogsList'
     ]),
     async onScroll () {
       const offsetRatioForEvent = 0.95
       const currentScrollTop = (window.scrollY || document.documentElement.scrollTop) + window.innerHeight
       const startHeightForEvent = document.documentElement.offsetHeight * offsetRatioForEvent
 
-      if (currentScrollTop >= startHeightForEvent && !this.isRandomDogsAction) {
-        await this.getMoreRandomDogsList()
+      if (currentScrollTop >= startHeightForEvent && !this.isBreedDogsAction) {
+        await this.getMoreBreedRandomDogsList(this.$route.params.breed)
       }
     }
   },
   async mounted () {
-    await this.getRandomDogsList()
+    await this.getBreedRandomDogsList(this.$route.params.breed)
   }
 }
 </script>

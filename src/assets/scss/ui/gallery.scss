@@ -1,1 +1,6 @@
-.ui-gallery {}
+.ui-gallery {
+  @extend .dg;
+
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: $global-size;
+}

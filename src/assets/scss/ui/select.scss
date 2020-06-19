@@ -1,1 +1,52 @@
-.ui-select {}
+.ui-select {
+  @extend .pos-r;
+
+  &-current {
+    @extend .ui-button;
+    @extend .ttc;
+    @extend .dif;
+    @extend .aic;
+
+    &.active {
+      .ui-select {
+        &-arrow {
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
+  &-value {
+    @extend .mr-2;
+  }
+  &-arrow {
+    @extend .dif;
+  }
+  &-wrap {
+    @extend .elevation-2;
+    @extend .pos-a;
+    @extend .df;
+    @extend .fdc;
+    @extend .mt-2;
+    @extend .py-1;
+
+    height: 20rem;
+    left: 0;
+    top: 100%;
+    background-color: $color-white;
+    z-index: 2;
+    overflow-y: auto;
+  }
+  &-option {
+    @extend .tdn;
+    @extend .ttc;
+    @extend .px-2;
+    @extend .py-1;
+
+    color: $color-black;
+
+    &:hover, &:focus {
+      background-color: $color-primary;
+      color: $color-white;
+    }
+  }
+}

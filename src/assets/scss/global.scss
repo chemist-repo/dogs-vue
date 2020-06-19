@@ -1,7 +1,8 @@
 body {
+  @extend .ma-0;
+
   font-family: 'Roboto', sans-serif;
-  font-size: 16px;
+  font-size: $global-size;
   line-height: 1.25;
   min-height: 100vh;
-  margin: 0;
 }
