@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/dogs-vue/precache-manifest.d6b221da218882333c60605130c470cb.js"
+  "/dogs-vue/precache-manifest.ed1eec3ec0ce7ea070b0b2268fcad2de.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "dogs-vue"});

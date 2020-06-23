@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "bdfbd49680d7d5bf24a6",
+    "revision": "87a0136a1a0a7a429ca6",
     "url": "/dogs-vue/css/app.eaefeea4.css"
   },
   {
@@ -16,7 +16,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/dogs-vue/img/no-image.jpg"
   },
   {
-    "revision": "6945b727e0e1a10b91aece4d586dc7fc",
+    "revision": "6ac70caa1ab1a71a4b22e68d91751382",
     "url": "/dogs-vue/index.html"
   },
   {
@@ -32,8 +32,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/dogs-vue/js/Home.6cc7615f.js"
   },
   {
-    "revision": "bdfbd49680d7d5bf24a6",
-    "url": "/dogs-vue/js/app.95bdeca4.js"
+    "revision": "87a0136a1a0a7a429ca6",
+    "url": "/dogs-vue/js/app.9431c0e8.js"
   },
   {
     "revision": "61388ffde6dd7e8dbda1",
