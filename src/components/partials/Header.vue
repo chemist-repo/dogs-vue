@@ -1,7 +1,7 @@
 <template>
   <header class="header">
     <router-link to="/" class="logo">
-      <img src="/img/logo.png" alt="dogs-vue" class="logo-img">
+      <img :src="logo" alt="dogs-vue" class="logo-img">
     </router-link>
     <button @click="onToggleActive" class="menu">
       <ui-icon v-if="!active" name="menu" />
@@ -33,6 +33,8 @@
 <script>
 import { mapGetters, mapActions } from 'vuex'
 
+const publicPath = process.env.NODE_ENV === 'production' ? process.env.VUE_APP_REPO_NAME : ''
+
 export default {
   name: 'p-header',
   computed: {
@@ -44,7 +46,8 @@ export default {
     }
   },
   data: () => ({
-    active: false
+    active: false,
+    logo: `${publicPath}/img/logo.png`
   }),
   methods: {
     ...mapActions('api', [

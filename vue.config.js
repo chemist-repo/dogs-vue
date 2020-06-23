@@ -1,5 +1,4 @@
-const REPO_NAME = '/dogs-vue' 
-const publicPath = process.env.NODE_ENV === 'production' ? REPO_NAME : '/'
+const publicPath = process.env.NODE_ENV === 'production' ? process.env.VUE_APP_REPO_NAME : '/'
 
 module.exports = {
   publicPath,
