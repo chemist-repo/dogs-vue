@@ -4,6 +4,21 @@
   @extend .df;
   @extend .aic;
   @extend .jcsb;
+  @extend .pos-r;
+}
+.menu {
+  @extend .cursor--pointer;
+  @extend .dif;
+  @extend .pa-0;
+
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-size: 2rem;
+
+  @include min-md {
+    display: none;
+  }
 }
 .nav {
   @extend .dg;
@@ -11,8 +26,24 @@
   grid-auto-columns: max-content;
   grid-auto-flow: column;
   grid-gap: $global-size / 2;
-}
 
+  @include max-md {
+    display: none;
+    position: absolute;
+    grid-auto-flow: unset;
+    padding: $global-size;
+    right: 0;
+    top: 100%;
+    z-index: 2;
+    background-color: $color-white;
+    border-bottom-left-radius: $global-size / 4;
+    box-shadow: inherit;
+
+    &.active {
+      display: grid;
+    }
+  }
+}
 .logo {
   @extend .df;
   @extend .aic;

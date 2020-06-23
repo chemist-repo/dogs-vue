@@ -50,6 +50,11 @@
     &c {
       text-transform: capitalize;
     }
+    &fu {
+      &:first-letter {
+        text-transform: uppercase;
+      }
+    }
   }
 }
 
