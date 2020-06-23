@@ -1,9 +1,6 @@
 import { isString } from '@/helpers/typeChecker'
 
-const publicPath = process.env.NODE_ENV === 'production' ? process.env.VUE_APP_REPO_NAME : ''
-const NO_IMAGE_PATH = `${publicPath}/img/no-image.jpg`
-
-export default function (imgPath, defaultPath = NO_IMAGE_PATH) {
+export default function (imgPath, defaultPath = '') {
   if (isString(imgPath)) {
     const HTMLElementImg = new Image()
     HTMLElementImg.src = imgPath

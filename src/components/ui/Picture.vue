@@ -17,7 +17,9 @@
 import preFetchImage from '@/helpers/preFetchImage'
 
 const REG_EXP_EXTERNAL_LINK = new RegExp('^(?:[a-z]+:)?//', 'i')
-const NO_IMAGE_PATH = '/img/no-image.jpg'
+
+const publicPath = process.env.NODE_ENV === 'production' ? process.env.VUE_APP_REPO_NAME : ''
+const NO_IMAGE_PATH = `${publicPath}/img/no-image.jpg`
 
 export default {
   name: 'ui-picture',
@@ -38,7 +40,7 @@ export default {
   watch: {
     async src (path) {
       if (REG_EXP_EXTERNAL_LINK.test(path)) {
-        this.imgPath = await preFetchImage(path)
+        this.imgPath = await preFetchImage(path, NO_IMAGE_PATH)
         this.$emit('onload')
       } else {
         this.imgPath = path
@@ -50,7 +52,7 @@ export default {
   }),
   async mounted () {
     if (REG_EXP_EXTERNAL_LINK.test(this.src)) {
-      this.imgPath = await preFetchImage(this.src)
+      this.imgPath = await preFetchImage(this.src, NO_IMAGE_PATH)
     }
   }
 }
