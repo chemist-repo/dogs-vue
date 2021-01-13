@@ -15,6 +15,12 @@ const routes = [
     component: () => import(/* webpackChunkName: "Favorites" */ '../views/Favorites.vue')
   },
   {
+    path: '/b',
+    redirect: {
+      name: 'Home'
+    }
+  },
+  {
     path: '/b/:breed',
     name: 'Breed',
     component: () => import(/* webpackChunkName: "Breed" */ '../views/Breed.vue')
@@ -22,7 +28,7 @@ const routes = [
 ]
 
 const router = new VueRouter({
-  mode: 'history',
+  mode: 'hash',
   base: process.env.BASE_URL,
   routes
 })

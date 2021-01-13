@@ -3,6 +3,8 @@
   @extend .pos-r;
   @extend .db;
 
+  background-color: $color-black;
+
   &--img {
     @extend .pos-a;
     @extend .w-100;
@@ -10,7 +12,7 @@
 
     left: 0;
     top: 0;
-    object-fit: cover;
+    object-fit: contain;
     object-position: center;
   }
   &-format {

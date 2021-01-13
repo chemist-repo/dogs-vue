@@ -45,6 +45,11 @@ export default {
       return this.$route.params.breed
     }
   },
+  watch: {
+    '$route.params' () {
+      this.active = false
+    }
+  },
   data: () => ({
     active: false,
     logo: `${publicPath}/img/logo.png`

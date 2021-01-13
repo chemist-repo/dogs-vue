@@ -5,6 +5,8 @@
   @extend .aic;
   @extend .jcsb;
   @extend .pos-r;
+
+  background-color: $color-white;
 }
 .menu {
   @extend .cursor--pointer;
