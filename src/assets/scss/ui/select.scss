@@ -48,6 +48,7 @@
     @extend .py-1;
 
     color: $color-black;
+    min-height: 26px;
 
     &:hover, &:focus {
       background-color: $color-primary;
